@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Casita</h1>
+    <p>Malo hablar</p>
+    <p>Tengo: {{ articles | length}} articulos</p>
+    <ul>
+        {% for article in articles %}
+            <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
